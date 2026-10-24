@@ -1,0 +1,2 @@
+# Jenkins-practical
+Pipeline connection
