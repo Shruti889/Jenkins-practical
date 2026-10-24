@@ -1,25 +1,20 @@
 pipeline {
-	agent any
-	triggers{
-		pollSCM ('H/5 ****')
-	}
-	stages{
-		stage('checkout'){
-			steps{
-				echo 'fetching source code from GitHub'
-				checkout scm
-				}
-				}
-				stage('Build'){
-					steps{
-						echo 'Build completed successfully'
-						}
-						}
-				stage('Test'){
-					steps{
-						echo 'Testing completed successfully'
-				}
-					}
-					}
-					}
-		
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
